@@ -32,7 +32,7 @@ const ValuePercentileType = new GraphQLObjectType({
   name: "ValueAndPercentileStats",
   fields: () => ({
     percentile: { type: GraphQLFloat },
-    value: { type: GraphQLInt },
+    value: { type: GraphQLFloat },
   }),
 });
 
@@ -42,8 +42,8 @@ const HeroBenchType = new GraphQLObjectType({
   fields: () => ({
     gold_per_min: { type: GraphQLList(ValuePercentileType) },
     xp_per_min: { type: GraphQLList(ValuePercentileType) },
-    //kills_per_min: { type: GraphQLList(ValuePercentileType) },
-    //last_hits_per_min: { type: GraphQLList(ValuePercentileType) },
+    kills_per_min: { type: GraphQLList(ValuePercentileType) },
+    last_hits_per_min: { type: GraphQLList(ValuePercentileType) },
   }),
 });
 
